@@ -1,7 +1,7 @@
+import { VITE_URL as baseUrl } from "../../Apienv";
+import { VITE_API_KEY as apiKey } from "../../Apienv";
+
 export const getNews = async ({ query }) => {
-  const apiKey = import.meta.env.VITE_API_KEY;
-  const baseUrl = import.meta.env.VITE_URL;
-  console.log(`API KEY is: ${apiKey}`)
   const yesterday = new Date();
   yesterday.setDate(yesterday.getDate() - 1);
   const formattedYesterday = yesterday.toISOString().split('T')[0];

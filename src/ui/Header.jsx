@@ -1,4 +1,4 @@
-import DarkModeToggle from "./darkModeToggle";
+import DarkModeToggle from "./DarkModeToggle";
 import Logo from "./Logo";
 import Navbar from "./Navbar";
 

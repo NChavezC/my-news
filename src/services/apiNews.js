@@ -1,6 +1,3 @@
-const BASE_URL = "https://newsapi.org/v2/everything";
-
-
 export const getNews = async ({ query }) => {
   const apiKey = import.meta.env.VITE_API_KEY;
   const baseUrl = import.meta.env.VITE_URL;

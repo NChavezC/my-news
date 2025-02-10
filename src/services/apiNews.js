@@ -1,9 +1,9 @@
 const BASE_URL = "https://newsapi.org/v2/everything";
 
-import { NEWS_API_KEY as apiKey} from "../../apiKeys";
 
 export const getNews = async ({ query }) => {
-  
+  const apiKey = import.meta.env.VITE_API_KEY;
+  const baseUrl = import.meta.env.VITE_URL;
   console.log(`API KEY is: ${apiKey}`)
   const yesterday = new Date();
   yesterday.setDate(yesterday.getDate() - 1);
@@ -12,7 +12,7 @@ export const getNews = async ({ query }) => {
   const firstDayOfMonth = new Date(yesterday.getFullYear(), yesterday.getMonth(), 1);
   const formattedFirstDayOfMonth = firstDayOfMonth.toISOString().split('T')[0];
 
-  const url = `${BASE_URL}?q=${encodeURIComponent(
+  const url = `${baseUrl}?q=${encodeURIComponent(
     query
   )}&domains=bbc.com,apnews.com,cnn.com,dw.com&from=${formattedFirstDayOfMonth}&to=${formattedYesterday}&sortBy=publishedAt&apiKey=${apiKey}`;
   const response = await fetch(url);

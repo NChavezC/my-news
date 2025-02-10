@@ -1,9 +1,5 @@
 function Home() {
-  const apiKey = import.meta.env.VITE_API_KEY;
-  const baseUrl = import.meta.env.VITE_URL;
   return <div className="flex flex-col items-center p-6">
-    {apiKey}<br />
-    {baseUrl}
   <h1 className="text-2xl font-bold mb-4">Trusted News Sources</h1>
   <div className="grid grid-cols-2 gap-4">
     <div className="p-2 border rounded-lg shadow-lg">
